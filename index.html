@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AR</title>
+  <meta charset="utf-8">
+  <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+    <a-scene embedded arjs>
+
+    <!-- Cámara AR ajustada a mi altura (175cm) -->
+    <a-entity id="userCam" camera look-controls position="0 1.75 0"></a-entity>
+    
+    <!-- Estatua siempre mirando a la cámara (con el look-at), además esta a 2 metros de distancia -->
+    <a-entity gltf-model="clara_campoamor.glb" look-at="target: camera" position="0 0 -2" scale="0.01 0.01 0.01"></a-entity>
+  </a-scene>
+</body>
+</html>
